@@ -1,0 +1,12 @@
+node1 ansible_host=192.168.25.5 ansuble_user=jxmmi
+node2 ansible_host=192.168.25.6 ansible_user=jxmmi
+node7 ansible_host=192.168.25.7 ansuble_user=jxmmi
+node8 ansible_host=192.168.25.8 ansible_user=jxmmi
+
+[stage]
+node1
+node2
+
+[prod]
+node7
+node8
