@@ -1,5 +1,5 @@
 #Here are instructions to create your first ansible playbook
-#You need 3 VMs, preferably created with PowerShell or Terraform or ARM. 
+#You need 3 VMs, preferably created with PowerShell or Terraform or ARM.
 #I created mine in the portal and I'll work on getting that scripted tomorrow
 
 #Once the VMs are created using centOS this time, we'll install ansible on the master node
