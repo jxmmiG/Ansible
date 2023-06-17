@@ -1,0 +1,14 @@
+- name: 'Playbook to Install Terraform on Target Nodes'
+  hosts: stage
+  become: yes
+  tasks:
+    - name: Copy terraform install script to remote server
+      copy:
+        src: installtfubuntu.sh
+        dest: /tmp/install_terraform.sh
+        owner: jxmmi
+        group: jxmmi
+        mode: ugo+x
+
+    - name: Run a shell command
+      shell: /tmp/install_terraform.sh
