@@ -102,9 +102,10 @@ $lbFIP = New-AzLoadBalancerFrontendIpConfig -Name 'InboundFrontEnd' -PublicIpAdd
 $lbBEP = New-AzLoadBalancerBackendAddressPoolConfig -Name "LB-BEP"
 $LBprobe = New-AzLoadBalancerProbeConfig -Name "LBprobe" -Protocol "tcp" -Port 80 -IntervalInSeconds 15 -ProbeCount 2 -ProbeThreshold 2
 $lbNATrule = New-AzLoadBalancerInboundNatRuleConfig -Name "rdp-master" -FrontendIPConfiguration $lbFIP -Protocol "Tcp" -FrontendPort 8050 -BackendPort 22 -IdleTimeoutInMinutes 4
+$lbOutboundRule = New-AzLoadBalancerOutboundRuleConfig -Name "outbound" -Protocol "All" -FrontendIPConfiguration $lbFIP -BackendAddressPool $lbBEP
 
 #the backend pool and NAT rule above were created without backend target NIC or IPs. We'll add that later
-$lb = New-AzLoadBalancer -Name $lbName -ResourceGroupName $RGname -Location $region -FrontendIpConfiguration $lbFIP -BackendAddressPool $lbBEP -Probe $LBprobe -InboundNatRule $lbNATrule
+$lb = New-AzLoadBalancer -Name $lbName -ResourceGroupName $RGname -Location $region -FrontendIpConfiguration $lbFIP -BackendAddressPool $lbBEP -Probe $LBprobe -InboundNatRule $lbNATrule -OutboundRule $lbOutboundRule
 $lb = Get-AzLoadBalancer -Name $lbName -ResourceGroupName $RGname
 
 #Now, how to add a NIC to Load Balancer backend pool or NatRule is tricky but we can achieve it with the script below
