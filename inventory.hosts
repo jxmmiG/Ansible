@@ -10,3 +10,11 @@ node2
 [prod]
 node7
 node8
+
+[web]
+node1
+node2
+
+[app]
+node7
+node8
