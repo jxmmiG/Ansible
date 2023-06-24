@@ -1,0 +1,25 @@
+- name: User Creation #optional
+  hosts: web
+  become: yes    #may be optional #priviledge escalation
+  tasks:
+    - name: Create dev user account
+      user:
+        name: kola
+        comment: sr dev
+        uid: 1040
+
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: Install tcpdump
+      yum:
+        name: tcpdump
+        state: latest
+
+    - name: start up web server
+      service: 
+        name: httpd
+        state: started
+        enabled: true
