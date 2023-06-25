@@ -1,0 +1,57 @@
+#main_section {
+  background-image: url(../assets/intro-bg.jpg);
+  height: 590px;
+  z-index: 1;
+  position: relative;
+  margin-top: 0px;
+  background-size: cover;
+  background-position: -610px 100px;
+  padding-top: 5rem;
+  color: $secondary-color;
+}
+
+//Styling Home text and description
+
+.main_text_holder {
+  @extend .default-padding;
+}
+
+#main_text {
+  margin: 2.5rem 0;
+}
+
+#main_home_button {
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  box-shadow: 2px 4px white;
+}
+
+#main_home_button:hover {
+  box-shadow: 0px 0px white;
+  transition: 0.2s ease-in-out;
+}
+
+#smooth_scroll {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  animation: bounce 0.8s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(-10%);
+  }
+}

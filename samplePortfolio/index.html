@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kolawole Atolagbe</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/logo_thumbnail_black.fw.png" />
+  <script src="https://use.fontawesome.com/33c1b956b7.js"></script>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <header class="header" style="z-index: 6;">
+    <nav>
+      <div>
+        <a href="index.html"><img src="assets/logo_thumbnail_white.png" alt="logo" style="width: 80px;"
+            class="nav_logo" /></a>
+      </div>
+      <div>
+        <a href="index.html"><img src="assets/logo_thumbnail_black.fw.png" alt="logo" style="width: 80px"
+            class="nav_logo_one" /></a>
+      </div>
+      <div class="nav_bar">
+        <ul>
+          <li class="header_links"><a href="#drive_section">About me</a></li>
+          <li class="header_links"><a href="#portfolio_section">Portfolio</a></li>
+          <li class="header_links"><a href="#contact_section">Contact me</a></li>
+          <li class="header_links"><a href="#footer_holder">Socials</a></li>
+          <li class="header_links"><a href="https://github.com/elboj" target="_blank"><i class="fa fa-github"
+                style="font-size: 1.5rem;"></i></a>
+          </li>
+
+          <!-- HEADER LINKS IS IN 768MQ -->
+        </ul>
+      </div>
+    </nav>
+    <div id="toggle_holder">
+      <i class="fa fa-bars toggle" aria-hidden="true"></i>
+      <i class="fa fa-times-circle toggle1" aria-hidden="true"></i>
+    </div>
+  </header>
+
+  <main>
+    <section id="main_section">
+      <article class="main_text_holder">
+        <h1 id="main_text">
+          Welcome to the Official Portfolio of Kolawole Atolagbe James.
+        </h1>
+        <p id="main_text_description">
+          I am a Cloud DevOps Engineer with Experience provisioning and mainaining Cloud Environments using a vast DevOps toolset including
+          Infrastructure-as-Code tools and CI/CD Pipelines.
+        </p>
+        <a href="#portfolio_section" id="main_home_button">View portfolio<i class="fa fa-chevron-right"
+            style="margin-left: 20px;"></i></a>
+      </article>
+      <section id="smooth_scroll">
+        <i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 2rem;"></i>
+      </section>
+    </section>
+
+
+    <!-- OVERLAY -->
+
+    <!-- WHAT DRIVES US -->
+    <section id="drive_section">
+      <div id="portfolio_section_holder">
+        <h2 id="drive_main_text" class="content">About me</h2>
+        <p id="drive_text_desc">
+          I am a Cloud DevOps Engineer with Experience provisioning and mainaining Cloud Environments
+          using a vast DevOps and automation toolset including
+          Python, PowerShell, ARM Templates, Terraform, Ansible, Azure Pipelines, and Azure CLI.
+        </p>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio_section">
+      <div id="portfolio_section_holder">
+        <h2>Work.</h2>
+        <p>When I'm not handling major projects, I'm constantly recreating things as a means of staying updated. See
+          for yourself</p>
+        <div id="portfolio_flex"></div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact_section">
+      <div id="contact_section_holder">
+        <article id="contact_flex">
+          <div class="contact_flex_item_left">
+            <p id="contact_heading">Start the <span>conversation</span></p>
+            <p class="contact_desc">
+              Have you got a project, or would you like us to collaborate on a project? Reach out to
+              me, and i would respond swiftly.
+            </p>
+            <hr />
+            <p class="contact_desc">To contact me, please call:
+              <span> 08175916632, 09025415425</span>
+              or send me an email <a href="mailto:kolawoleatolagbe@gmail.com"> <span>kolawoleatolagbe@gmail.com</span></a>
+            </p>
+          </div>
+          <div class="contact_flex_item_right">
+            <form class="gform" id="contact_form" method="POST" data-email="adaja.tobi1@gmail.com"
+              action="https://script.google.com/macros/s/AKfycbybV2pHTDPrQCT3q8TvchWjKYDR88Q5xypJb0PvYw/exec">
+              <p id="form_desc">Got Questions?</p>
+              <input type="text" name="firstname" id="firstname" required placeholder="First Name">
+              <input type="email" name="email" id="email" required placeholder="Email*">
+              <input type="number" name="phone_number" id="phone_number" required placeholder="Phone Number">
+              <textarea name="info" id="info" cols="30" rows="10" required>How can i be of service to you?</textarea>
+
+              <!-- FORM RESPONSE -->
+              <div style="display:none" class="thankyou_message">
+                <!-- You can customize the thankyou message by editing the code below -->
+                <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                </h2>
+              </div>
+              <button type="submit" id="submit">Send<i class="fa fa-paper-plane"
+                  style="margin-left: 20px;"></i></button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section id="footer_holder">
+      <div id="footer_flex">
+        <!-- <div id="footer_flex_left">
+          <p>Kolawole Atolagbe, Lagos Nigeria</p>
+          <p>t: +2348175916632, +2349025415425</p>
+          <p>m: kolawoleatolagbe@gmail.com</p>
+        </div> -->
+        <div id="footer_flex_right">
+          <a href="#"><i class="fa fa-github" style="font-size: 1.5rem; margin-right: 10px;"></i>Github</a>
+          <a href="#"><i class="fa fa-twitter" style="font-size: 1.5rem; margin-right: 10px;"></i>Twitter</a>
+          <a href="#"><i class="fa fa-linkedin" style="font-size: 1.5rem; margin-right: 10px;"></i>LinkedIn</a>
+          <a href="#"><i class="fa fa-google" style="font-size: 1.5rem; margin-right: 10px;"></i>Google</a>
+        </div>
+      </div>
+      <p>&copy2021 Kolawole Atolagbe</p>
+    </section>
+  </footer>
+  <!-- SCRIPTS -->
+  <!-- <script type="module" src="/module/data.js"></script> -->
+  <script type="module" src="app.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+</body>
+
+</html>

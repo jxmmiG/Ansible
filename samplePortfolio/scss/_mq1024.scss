@@ -1,0 +1,112 @@
+@media screen and (min-width: 1024px) {
+  .default-padding {
+    padding-left: 4.5rem !important;
+    padding-right: 4.5rem !important;
+  }
+
+  .header {
+    padding: 1rem 5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav_bar {
+    display: block;
+    margin-top: 0;
+
+    ul li {
+      display: inline-block;
+      padding: 0 0.5rem;
+      font-size: 0.8rem;
+      line-height: 3rem;
+    }
+  }
+
+  #toggle_holder {
+    display: none;
+  }
+
+  #main_section {
+    background-position: 0px 0px;
+  }
+
+  #main_text {
+    width: 60%;
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+
+  #main_text_description {
+    width: 50%;
+    text-align: justify;
+  }
+
+  #skillset_flex {
+    flex-direction: row;
+    justify-content: center !important;
+    padding: 0 3rem;
+  }
+
+  .item {
+    width: 80%;
+  }
+
+  #client_section {
+    margin-top: 30px;
+  }
+
+  #contact_flex {
+    flex-direction: row;
+  }
+
+  .contact_flex_item_left {
+    padding: 9rem 0;
+  }
+
+  #contact_form {
+    padding: 3rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .default-padding {
+    padding-left: 5.5rem !important;
+    padding-right: 5.5rem !important;
+  }
+
+  //.header {
+  // padding: 2rem 5rem;
+  //}
+
+  .nav_logo {
+    width: 80px !important;
+  }
+
+  .header_links {
+    font-size: 1rem;
+  }
+
+  #main_section {
+    height: 700px !important;
+  }
+  .main_text_holder {
+    margin-top: 70px !important;
+  }
+
+  #main_text {
+    font-size: 3.8rem;
+  }
+
+  #smooth_scroll {
+    margin-top: 6rem;
+  }
+}

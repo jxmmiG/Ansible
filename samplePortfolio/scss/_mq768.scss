@@ -1,0 +1,83 @@
+@media screen and (min-width: 768px) {
+  /*****GENERAL STYLES****/
+  p {
+    font-size: 0.9rem;
+  }
+
+  .default-padding {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  /*************************/
+
+  .header {
+    padding: 1rem 3.5rem;
+  }
+
+  .header_links a {
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  #main_section {
+    height: 600px;
+    background-position: -300px 100px;
+  }
+
+  #main_text {
+    width: 70%;
+    font-size: 3rem;
+  }
+
+  #main_text_description {
+    width: 60%;
+    text-align: justify;
+  }
+
+  #main_home_button {
+    font-size: 0.9rem;
+    width: 200px;
+    height: 40px;
+    box-shadow: 8px 6px white;
+  }
+
+  // portfoliosection
+
+  // #portfolio_flex {
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
+
+  // .portfolio-items {
+  //   width: 30% !important;
+  //   border: 2px solid sandybrown;
+  // }
+
+  //SKILLSET
+  .item {
+    padding: 15px 0 !important;
+  }
+
+  .skillset_item {
+    // border: $b3;
+    width: 80%;
+  }
+
+  //CLIENTS
+  #client_flex {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  //form
+  input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  #submit {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,28 @@
+footer {
+  background-color: #000;
+  color: white;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+#footer_holder {
+  @extend .default-padding;
+}
+
+#footer_flex {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+#footer_flex_left {
+  margin-bottom: 30px;
+}
+
+#footer_flex_right a {
+  display: block;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}

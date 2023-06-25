@@ -1,0 +1,92 @@
+//CONTACT
+
+#contact_section {
+  background: $alt-color;
+  padding: 2rem 0;
+  margin-top: 2.5rem;
+}
+
+#contact_section_holder {
+  @extend .default-padding;
+}
+
+#contact_flex {
+  display: flex;
+  flex-direction: column;
+}
+.contact_flex_item_left {
+  padding: 4rem 0;
+  //   border: $b2;
+}
+// .contact_flex_item_right {
+//   border: $b2;
+// }
+
+#contact_heading {
+  font-size: 2rem;
+  line-height: 2rem;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.contact_desc {
+  margin-top: 2rem;
+  span {
+    color: red;
+  }
+}
+
+hr {
+  width: 80%;
+  margin-top: 40px;
+}
+
+#contact_form {
+  background-color: white;
+  margin-top: 2rem;
+  padding: 3rem 1rem;
+}
+
+#form_desc {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  span {
+    font-weight: 600;
+    color: red;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem 0;
+  border-width: 0px 0px 1px 0px;
+  margin: 1rem 0;
+}
+
+::placeholder {
+  text-align: left;
+}
+
+#submit {
+  width: 150px;
+  height: 40px;
+  margin-top: 2rem;
+  background: #000;
+  color: white;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 3px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  resize: none;
+}

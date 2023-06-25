@@ -1,0 +1,15 @@
+//PORTFOLIO HOVER EFFECT
+.img:hover {
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.portfolio_items:hover .caption {
+  bottom: 100px;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio_items:hover .fa-long-arrow-right {
+  visibility: visible;
+  transition: 0.3s linear;
+}

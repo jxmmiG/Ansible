@@ -1,0 +1,17 @@
+@import "./reset";
+@import "./header";
+@import "./home";
+@import "./portfolio";
+@import "./drive";
+
+@import "./contact";
+@import "./footer";
+@import "./mq320";
+@import "./mq768";
+@import "./mq1024";
+@import "./effect";
+
+.default-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
