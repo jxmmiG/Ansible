@@ -1,0 +1,32 @@
+- name: Set up webserver on the two nodes #optional
+  hosts: web
+  become: yes    #may be optional #priviledge escalation
+  tasks:
+    - name: Create dev user account
+      user:
+        name: kola
+        comment: sr dev
+        uid: 1040
+
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: start up web server
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Unarchive a file that needs to be downloaded - this file is my samplePortfolio
+      ansible.builtin.unarchive:
+        src: https://github.com/jxmmiG/Ansible/archive/refs/heads/main.zip
+        dest: /tmp/
+        remote_src: yes
+
+    - name: Copy repo files to the apache folder
+      ansible.builtin.copy:
+        src: /tmp/Ansible-main/samplePortfolio/ #Ansible-main is how it's downoaded as NameOfRepo-main
+        dest: /var/www/html/
+        remote_src: yes

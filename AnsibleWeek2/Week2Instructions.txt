@@ -1,0 +1,59 @@
+OBJECTIVES & PLANS
+Deploy three Virtual Machines and a Load Balancer using automation tools (Terraform or PowerShell)
+One of the VMs would be our controller, and the other two would host our website.
+We need to configure the Load Balancer with:
+	Two Frontend IPs
+	Load Balancing rules to us access the website using both VMs on port 80
+	Inbound NAT rules to allow us SSH into the controller
+	Outbound rules to allow both the nodes to access the internet.
+
+
+Once this is all set up, we can log into our controller node (Check the Inbound NAT rule of the Load Balancer for the IP and the port should be 8050)
+
+
+Then we can proceed with the usual steps
+Install Ansible
+Generate and copy SSH keys to make it easier to access the nodes
+Create your inventory file (inventory.hosts or anything you would like to name it)
+Test connectivity to the nodes with: 
+[ansible all -i inventory.hosts -m ping]
+
+
+Once the preliminary steps are done, then we can start actually creating our playbook.
+So the tasks are:
+	Create a dev user account
+	Install apache
+	Start and enable the apache service
+	Download a file and then unzip it (I was able to conbine these into one play)
+	Copy the unzipped files to the apache folder /var/www/html/
+
+
+To achieve this we can write a playbook called playbookweek2.yaml 
+
+
+Then we can finally run the playbook with: 
+[ansible-playbook -i inventory.hosts playbookweek2.yaml -vv]
+
+
+
+USEFUL RESOURCES
+Tobi's repo
+https://github.com/elboj/
+
+My repo
+https://github.com/jxmmiG/Ansible/
+
+DownGit (tool to download a github repo as a zip, but doesn't seem to work well with wget in Linux)
+https://minhaskamal.github.io/DownGit/#/home
+
+ANSIBLE MODULES
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/unarchive_module.html
+
+The link for your website would be something like where "uksouth" should be replaced by the region your resources are deployed in.
+http://$DnsLabel.uksouth.cloudapp.azure.com
+
+***********************
+
+For a more ambitious project, we can do the same thing but access the website using an application gateway instead of a load balancer, and then use a VPN to manage the controller VM.
